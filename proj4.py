@@ -14,5 +14,5 @@ response = requests.post("http://ip-api.com/batch", json=[ipadd]).json()
 
 for ip_info in response:
     for k,v in ip_info.items():
-        print(k, v)
+        print('{0:>16}\t{1:<50}'.format(k, v))
     print("\n")
